@@ -1,18 +1,14 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
   CursorArrowRaysIcon,
-  DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
-  SunIcon,
   PresentationChartBarIcon,
   BuildingStorefrontIcon,
   CurrencyDollarIcon,
   ArchiveBoxIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../../public/img/benefit-one.png";
-import benefitTwoImg from "../../public/img/benefit-two.png";
+import benefitOneImg from "../../public/img/benefit-1.png";
+import benefitTwoImg from "../../public/img/benefit2.png";
 
 const benefitOne = {
   title: "Proyecciones de Ventas con IA y Machine Learning",

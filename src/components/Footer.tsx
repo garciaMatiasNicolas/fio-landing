@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
+import logo from '../../public/img/logo-dtafio-white.png';
 import React from "react";
 import { Container } from "@/components/Container";
-import { ChartBarSquareIcon } from "@heroicons/react/24/solid";
 
 export function Footer() {
   const navigation = ["Producto", "Planes", "Testimonios"];
   const legal = ["Documentación", "Funcionalidades", "FAQs"];
   return (
-    <div className="relative bg-gradient-to-b from-sky-600 to-sky-800 text-white">
+    <div className="relative bg-gradient-to-b from-[#3B71CA] to-sky-800 text-white px-6">
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
@@ -18,37 +18,17 @@ export function Footer() {
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-white dark:text-gray-100"
               >
-                <div className="flex justify-center items-center p-0 bg-transparent text-white rounded">
-                  <ChartBarSquareIcon 
-                    color="white"
-                    width="40"
-                    height="40"
-                  />
-                </div>
-                <span>DTA F&IO</span>
+                 <Image     
+                  src={logo}
+                  width={200}
+                  height={200}
+                  alt="Logo DTA F&IO"     
+                />
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-white dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
-            </div>
-
-            <div className="mt-5">
-              <a
-                href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-                target="_blank"
-                rel="noopener"
-                className="relative block w-44"
-              >
-                <Image
-                  src="/img/vercel.svg"
-                  alt="Powered by Vercel"
-                  width="212"
-                  height="44"
-                />
-              </a>
+            <div className="max-w-md mt-4 text-white">
+              Descubre DTA F&IO: la solución integral de forecasting y optimización de inventarios que mejora la precisión de tus pronósticos, reduce costos y maximiza la eficiencia operativa.
             </div>
           </div>
 
@@ -58,9 +38,10 @@ export function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-white rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-white rounded-md text-white hover:text-white rounded-md no-underline relative group transition duration-300"
                 >
                   {item}
+                  <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-[120px] group-hover:left-0"></span>
                 </Link>
               ))}
             </div>
@@ -71,16 +52,17 @@ export function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-white rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-white rounded-md text-white hover:text-white rounded-md no-underline relative group transition duration-300"
                 >
                   {item}
+                  <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-[120px] group-hover:left-0"></span>
                 </Link>
               ))}
             </div>
           </div>
           <div className="">
             <div>Siguenos</div>
-            <div className="flex mt-5 space-x-5 text-white dark:text-gray-500">
+            <div className="flex mt-5 space-x-5 text-white">
               <a
                 href="https://instagram.com/web3templates"
                 target="_blank"
@@ -97,12 +79,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-white dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
+        <div className="my-10 text-sm text-center text-white">
+          Copyright ©  {new Date().getFullYear()} -
           <a href="/">
-            DTA F&IO.
-          </a>{" "}
-          Illustrations from{" "}
+            - DTA F&IO.
+          </a>
         </div>
       </Container>
     </div>

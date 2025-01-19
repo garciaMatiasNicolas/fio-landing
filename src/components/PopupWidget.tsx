@@ -58,7 +58,7 @@ export function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <>
-            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
+            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-[#3B71CA] rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-[#3B71CA] focus:bg-[#3B71CA] ease">
               <span className="sr-only">Open Contact form Widget</span>
               <Transition
                 show={!open}
@@ -118,10 +118,10 @@ export function PopupWidget() {
               as="div"
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
-                <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
+                <div className="flex flex-col items-center justify-center h-32 p-5 bg-[#3B71CA]">
+                  <h3 className="text-lg text-white">¿Cómo podemos ayudarte?</h3>
                   <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                    Solemos respondemos en algunas horas
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
@@ -154,20 +154,20 @@ export function PopupWidget() {
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Full Name
+                          Nombre completo
                         </label>
                         <input
                           type="text"
                           id="full_name"
                           placeholder="John Doe"
                           {...register("name", {
-                            required: "Full name is required",
+                            required: "Tu nombre es requerido",
                             maxLength: 80,
                           })}
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.name
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              : "border-gray-300 focus:border-[#3B71CA] ring-indigo-100"
                           }`}
                         />
                         {errors.name && (
@@ -182,23 +182,23 @@ export function PopupWidget() {
                           htmlFor="email"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Email Address
+                          Tu Email
                         </label>
                         <input
                           type="email"
                           id="email"
                           {...register("email", {
-                            required: "Enter your email",
+                            required: "Tu email es requerido",
                             pattern: {
                               value: /^\S+@\S+$/i,
-                              message: "Please enter a valid email",
+                              message: "Por favor entra un email valido",
                             },
                           })}
-                          placeholder="you@company.com"
+                          placeholder="tu@empresa.com"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              : "border-gray-300 focus:border-[#3B71CA] ring-indigo-100"
                           }`}
                         />
 
@@ -214,20 +214,20 @@ export function PopupWidget() {
                           htmlFor="message"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Your Message
+                          Tu Duda, Consulta o Mensaje
                         </label>
 
                         <textarea
                           rows={4}
                           id="message"
                           {...register("message", {
-                            required: "Enter your Message",
+                            required: "Escribe tu mensaje",
                           })}
-                          placeholder="Your Message"
+                          placeholder="Escribe aqui..."
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
                               ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              : "border-gray-300 focus:border-[#3B71CA] ring-indigo-100"
                           }`}
                           required
                         ></textarea>
@@ -240,7 +240,7 @@ export function PopupWidget() {
                       <div className="mb-3">
                         <button
                           type="submit"
-                          className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                          className="w-full px-3 py-4 text-white bg-[#3B71CA] rounded-md focus:bg-[#3B71CA] focus:outline-none"
                         >
                           {isSubmitting ? (
                             <svg
@@ -264,7 +264,7 @@ export function PopupWidget() {
                               ></path>
                             </svg>
                           ) : (
-                            "Send Message"
+                            "Enviar"
                           )}
                         </button>
                       </div>
@@ -272,17 +272,6 @@ export function PopupWidget() {
                         className="text-xs text-center text-gray-400"
                         id="result"
                       >
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Web3Forms
-                          </a>
-                        </span>
                       </p>
                     </form>
                   )}
@@ -304,14 +293,14 @@ export function PopupWidget() {
                         />
                       </svg>
                       <h3 className="py-5 text-xl text-green-500">
-                        Message sent successfully
+                        Mensaje enviado correctamente
                       </h3>
-                      <p className="text-gray-700 md:px-3">{Message}</p>
+                      <p className="text-gray-700 md:px-3">Intentaremos contestar su consulta en la brevedad</p>
                       <button
-                        className="mt-6 text-indigo-600 focus:outline-none"
+                        className="mt-6 text-[#3B71CA] focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        Ir al inicio
                       </button>
                     </div>
                   )}
@@ -334,14 +323,14 @@ export function PopupWidget() {
                       </svg>
 
                       <h3 className="text-xl text-red-400 py-7">
-                        Oops, Something went wrong!
+                        Ocurrio un error al enviar el mensaje, intente nuevamente
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
-                        className="mt-6 text-indigo-600 focus:outline-none"
+                        className="mt-6 text-[#3B71CA] focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        Ir al inicio
                       </button>
                     </div>
                   )}

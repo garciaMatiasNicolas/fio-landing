@@ -29,17 +29,26 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div data-aos="fade-zoom-in">
+      <div data-aos="fade-zoom-in" id="product">
         <SectionTitle
-          id="product"
           preTitle="Beneficios DTA F&IO"
           title=" Por que utilizar DTA F&IO"
         >
           Nuestro software es una solución avanzada para la proyección de ventas y la optimización de inventarios, diseñada para empresas que buscan maximizar su eficiencia operativa y mejorar su rentabilidad. Fácil de usar y respaldado por inteligencia artificial, transforma tus datos en estrategias claras y efectivas.
         </SectionTitle>
         <Benefits data={benefitOne} />
+      </div>
+
+      <div data-aos="fade-zoom-in">  
         <Banner />
-        <Benefits imgPos="right" data={benefitTwo} />
+      </div>
+
+      <div data-aos="fade-zoom-in">
+        <SectionTitle
+          preTitle="INVENTARIO"
+          title="Evita el sobrestock"
+        />
+        <Benefits data={benefitTwo} />
       </div>
       
       <div data-aos="fade-zoom-in">
@@ -51,7 +60,7 @@ export default function Home() {
         <Clients />
       </div>
 
-      <div data-aos="fade-zoom-in">
+      {/* <div data-aos="fade-zoom-in">
         <SectionTitle
           preTitle="Watch a video"
           title="Learn how to fullfil your needs"
@@ -62,21 +71,23 @@ export default function Home() {
         </SectionTitle>
 
         <Video videoId="fZ0D0cnR88E" />
-      </div>
+      </div> */}
 
       <div data-aos="fade-zoom-in">
         <SectionTitle
           id="testimonials"
-          preTitle="Testimonials"
-          title="Here's what our customers said"
+          preTitle="Testimonios"
+          title="Opiniones de nuestros clientes"
         >
-          Testimonials is a great way to increase the brand trust and awareness.
-          Use this section to highlight your popular customers.
+          Aquí podras comprobar lo que opinan nuestros clientes y ver como estamos del lado tuyo para que puedas aprovrechar nuestro sistema al máximo
         </SectionTitle>
 
         <Testimonials />
       </div>
-      <Cta />
+
+      <div id="get-demo" className="mb-6"> 
+        <Cta />
+      </div>
 
       <div data-aos="fade-zoom-in">
         <SectionTitle id="FAQS" preTitle="FAQs" title="Preguntas frecuentes" />

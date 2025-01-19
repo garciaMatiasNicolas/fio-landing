@@ -5,7 +5,7 @@ import { CalendarDaysIcon } from '@heroicons/react/24/solid';
 
 const Banner = () => {
     return (
-        <div className='w-full h-full bg-gradient-to-b from-sky-600 to-sky-800 flex items-center justify-center'>    
+        <div className='w-full h-full bg-[#3B71CA] flex items-center justify-center'>    
             <div className='w-full max-w-[1000px] flex justify-center flex-col items-center h-[250px] mb-12 pt-5'>
                 <CalendarDaysIcon 
                     width={80}
