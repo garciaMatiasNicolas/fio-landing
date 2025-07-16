@@ -10,13 +10,13 @@ export function Footer() {
   return (
     <div className="relative bg-gradient-to-b from-[#3B71CA] to-sky-800 text-white px-6">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
               {" "}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-white dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium text-white "
               >
                  <Image     
                   src={logo}

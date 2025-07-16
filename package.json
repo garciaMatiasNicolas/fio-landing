@@ -1,17 +1,13 @@
 {
-  "name": "nextly-template",
+  "name": "dtafio-landing",
   "version": "2.0.0",
-  "description": "Nextly Landing Page Template",
+  "description": "DTAFIO Landing Page",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/web3templates/nextly-template"
   },
   "keywords": [
     "nextjs",
@@ -23,6 +19,7 @@
   "dependencies": {
     "@headlessui/react": "^2.0.3",
     "@heroicons/react": "^2.1.3",
+    "@types/react-slick": "^0.23.13",
     "aos": "^2.3.4",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
@@ -30,6 +27,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.4",
     "react-slick": "^0.30.3",
+    "sharp": "^0.34.3",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.1"
   },

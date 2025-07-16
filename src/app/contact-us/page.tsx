@@ -1,141 +1,325 @@
+"use client"
 import React from 'react'
+import { 
+  CheckCircleIcon, 
+  StarIcon, 
+  PhoneIcon, 
+  EnvelopeIcon,
+  BuildingOfficeIcon,
+  UserIcon,
+  ChartBarIcon,
+  CurrencyDollarIcon,
+  ClockIcon,
+  ShieldCheckIcon,
+  RocketLaunchIcon,
+  SparklesIcon
+} from '@heroicons/react/24/outline';
 
 const ContactUs = () => {
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-[#3B71CA] text-white py-12 px-4 text-center flex items-center pt-6 justify-center flex-col h-[400px]">
-        <h1 className="text-4xl font-bold mt-12">Prueba GRATIS 1 Mes</h1>
-        <p className="text-lg mt-4 max-w-3xl mx-auto">
-          ¡Estás a punto de probar <strong>DTA F&IO</strong>! El unico Software para poder proyectar tu demanda y optimizar tu inventario de la mejor manera. Ofrecemos proyecciones con IA, Machine learning, 
-          Reposicion de stock por sucursal, y mucho mas.
-        </p>
+    <div className="min-h-screen from-gray-50 via-white to-[rgb(59,113,202)]/10 bg-white">
+      {/* Hero Header */}
+      <header className="relative bg-gradient-to-br from-[rgb(59,113,202)] via-[rgb(79,133,222)] to-[rgb(59,113,202)] text-white py-24 px-4 overflow-hidden">
+        {/* Animated decorative background elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgb(59,113,202)]/30 to-[rgb(99,153,242)]/20"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-x-48 -translate-y-48 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full translate-x-40 translate-y-40 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-white/3 rounded-full animate-bounce"></div>
+        
+        <div className="relative max-w-5xl mx-auto text-center mt-12">
+          {/* Enhanced Badge */}
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white/15 to-white/10 backdrop-blur-sm rounded-full text-white font-medium text-sm mb-8 border border-white/20 shadow-lg">
+            <SparklesIcon className="w-5 h-5 mr-2" />
+            Prueba Gratuita por 1 Mes - Sin Compromiso
+          </div>
+          
+          <h1 className="text-6xl font-bold mb-8 leading-tight">
+            Comienza tu transformación
+            <span className="block bg-gradient-to-r from-white via-[rgb(99,153,242)] to-white bg-clip-text text-transparent mt-2">
+              digital hoy mismo
+            </span>
+          </h1>
+          
+          <p className="text-xl leading-relaxed max-w-4xl mx-auto text-white mb-8">
+            Únete a las <strong className="text-white">empresas líderes</strong> que ya optimizan sus operaciones con 
+            <strong className="text-white"> IA y Machine Learning</strong>. 
+            Proyección de demanda, reposición inteligente y gestión avanzada de inventario.
+          </p>
+
+          {/* Call to Action */}
+          <div className="mt-12">
+            <button className="px-8 py-4 bg-gradient-to-r from-white to-[rgb(99,153,242)] text-[rgb(59,113,202)] font-bold rounded-xl hover:from-[rgb(99,153,242)] hover:to-white hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+              ↓ Completa el formulario y comienza ya ↓
+            </button>
+          </div>
+        </div>
       </header>
 
-      {/* Information Section */}
-      <section className="py-10 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-gray-800">
-          <h2 className="text-2xl font-semibold text-center mb-6">
-            Algunas cosas a tener en cuenta:
-          </h2>
-          <ul className="space-y-4 text-lg">
-            <li>
-              ✅ La prueba es totalmente gratuita durante un mes. Al finalizar el
-              período de prueba, tú decides si continuar o no.
-            </li>
-            <li>
-              ✅ Los precios son fijos y sin comisiones. Puedes{" "}
-              <a
-                href="#"
-                className="text-[#3B71CA] underline hover:text-[#3462ac]"
-              >
-                consultarlos aquí
-              </a>
-              .
-            </li>
-            <li>
-              ✅ El soporte y asistencia para implementar el servicio está
-              incluido desde el día 0.
-            </li>
-            <li>
-              ✅ Una vez que completes tus datos, nos pondremos en contacto para
-              coordinar una reunión donde te mostraremos en detalle más sobre el
-              sistema.
-            </li>
-          </ul>
+      {/* Enhanced Information Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-white to-gray-50 relative">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgb(59,113,202)]/5 to-transparent"></div>
+        
+        <div className="relative max-w-5xl mx-auto">
+          {/* Section header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 bg-[rgb(59,113,202)]/10 rounded-full text-[rgb(59,113,202)] font-medium text-sm mb-4">
+              <ShieldCheckIcon className="w-4 h-4 mr-2" />
+              Garantías y Beneficios
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 lg:text-4xl mb-4">
+              Todo lo que necesitas saber sobre tu
+              <span className="block bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] bg-clip-text text-transparent">
+                prueba gratuita
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Sin compromisos, sin letra chica. Solo resultados comprobados para tu negocio.
+            </p>
+          </div>
+
+          {/* Benefits grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Benefit cards */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <CheckCircleIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Prueba totalmente gratuita
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Un mes completo</strong> para evaluar todas las funcionalidades. 
+                    Al finalizar, tú decides si continuar o no, sin penalizaciones.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[rgb(59,113,202)] to-[rgb(79,133,222)] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <CurrencyDollarIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Precios fijos y transparentes
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Sin comisiones ocultas ni sorpresas. Consulta nuestros planes 
+                    <a href="/#plans" className="text-[rgb(59,113,202)] font-semibold hover:underline"> aquí</a> 
+                    y conoce exactamente lo que pagarás.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <ShieldCheckIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Soporte integral incluido
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Desde el día 0</strong> tendrás acceso completo a nuestro equipo 
+                    de especialistas para implementar y optimizar el sistema en tu empresa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <RocketLaunchIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Demo personalizada garantizada
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Una vez completado el formulario, <strong>coordinamos una reunión</strong> 
+                    donde te mostraremos el sistema funcionando con datos reales de tu industria.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-full text-green-700 font-medium text-sm border border-green-200">
+              <CheckCircleIcon className="w-5 h-5 mr-2 text-green-600" />
+              Más de 30+ empresas ya confían en nosotros
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-center text-gray-800">
-            Completa el formulario para empezar
-          </h2>
-          <p className="text-center text-gray-600 mt-2">
-            Uno de nuestros representantes se pondrá en contacto contigo.
-          </p>
-
-          {/* Form */}
-          <form className="mt-8 space-y-6">
-            {/* Full Name */}
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nombre completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3B71CA] focus:border-[#3B71CA]"
-                placeholder="Ingresa tu nombre completo"
-                required
-              />
+      {/* Enhanced Form Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-[rgb(59,113,202)]/5 relative">
+        {/* Background decorations */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgb(59,113,202)]/5 to-transparent"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-[rgb(59,113,202)]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-[rgb(79,133,222)]/10 rounded-full blur-3xl"></div>
+        
+        <div className="relative max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Form header */}
+            <div className="bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] px-8 py-12 text-center text-white relative overflow-hidden">
+              {/* Header decorations */}
+              <div className="absolute top-0 left-0 w-20 h-20 bg-white/10 rounded-full -translate-x-10 -translate-y-10"></div>
+              <div className="absolute bottom-0 right-0 w-16 h-16 bg-white/10 rounded-full translate-x-8 translate-y-8"></div>
+              
+              <div className="relative">
+                <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium text-sm mb-4">
+                  <SparklesIcon className="w-4 h-4 mr-2" />
+                  Proceso simple y rápido
+                </div>
+                <h2 className="text-3xl font-bold mb-3">
+                  Completa el formulario para empezar
+                </h2>
+                <p className="text-white text-lg">
+                  Nos pondremos en contacto contigo para agendar tu demo personalizada.
+                </p>
+              </div>
             </div>
 
-            {/* Email */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Correo electrónico
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3B71CA] focus:border-[#3B71CA]"
-                placeholder="correo@ejemplo.com"
-                required
-              />
-            </div>
+            {/* Form content */}
+            <div className="p-8 lg:p-12">
+              <form className="space-y-8" onSubmit={handleSubmit}>
+                {/* Name field */}
+                <div className="group">
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <UserIcon className="w-4 h-4 inline mr-2 text-[rgb(59,113,202)]" />
+                    Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-[rgb(59,113,202)]/20 focus:border-[rgb(59,113,202)] transition-all duration-300 text-gray-900 placeholder-gray-400 group-hover:border-gray-300"
+                    placeholder="Ej: Juan Carlos Pérez"
+                    required
+                  />
+                </div>
 
-            {/* Phone */}
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Teléfono
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3B71CA] focus:border-[#3B71CA]"
-                placeholder="+54 9 351..."
-                required
-              />
-            </div>
+                {/* Email field */}
+                <div className="group">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <EnvelopeIcon className="w-4 h-4 inline mr-2 text-[rgb(59,113,202)]" />
+                    Correo electrónico *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-[rgb(59,113,202)]/20 focus:border-[rgb(59,113,202)] transition-all duration-300 text-gray-900 placeholder-gray-400 group-hover:border-gray-300"
+                    placeholder="juan.carlos@empresa.com"
+                    required
+                  />
+                </div>
 
-            {/* Club Name */}
-            <div>
-              <label
-                htmlFor="club"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nombre de tu empresa
-              </label>
-              <input
-                type="text"
-                id="club"
-                className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#3B71CA] focus:border-[#3B71CA]"
-                placeholder="Ej: Mi Empresa S.A"
-                required
-              />
-            </div>
+                {/* Phone field */}
+                <div className="group">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <PhoneIcon className="w-4 h-4 inline mr-2 text-[rgb(59,113,202)]" />
+                    Teléfono *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-[rgb(59,113,202)]/20 focus:border-[rgb(59,113,202)] transition-all duration-300 text-gray-900 placeholder-gray-400 group-hover:border-gray-300"
+                    placeholder="+54 9 351 123 4567"
+                    required
+                  />
+                </div>
 
-            {/* Submit Button */}
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-[#3B71CA] text-white py-3 px-6 rounded-md shadow-md hover:bg-[#3462ac] transition duration-200"
-              >
-                Enviar formulario
-              </button>
+                {/* Company field */}
+                <div className="group">
+                  <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <BuildingOfficeIcon className="w-4 h-4 inline mr-2 text-[rgb(59,113,202)]" />
+                    Nombre de tu empresa *
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-[rgb(59,113,202)]/20 focus:border-[rgb(59,113,202)] transition-all duration-300 text-gray-900 placeholder-gray-400 group-hover:border-gray-300"
+                    placeholder="Ej: Mi Empresa S.A."
+                    required
+                  />
+                </div>
+
+                {/* Industry field (new) */}
+                <div className="group">
+                  <label htmlFor="industry" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <ChartBarIcon className="w-4 h-4 inline mr-2 text-[rgb(59,113,202)]" />
+                    Sector/Industria
+                  </label>
+                  <select
+                    id="industry"
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-[rgb(59,113,202)]/20 focus:border-[rgb(59,113,202)] transition-all duration-300 text-gray-900 group-hover:border-gray-300"
+                  >
+                    <option value="">Selecciona tu sector</option>
+                    <option value="retail">Retail y Comercio</option>
+                    <option value="manufactura">Manufactura</option>
+                    <option value="distribucion">Distribución</option>
+                    <option value="farmacia">Farmacia</option>
+                    <option value="automotriz">Automotriz</option>
+                    <option value="alimentos">Alimentos y Bebidas</option>
+                    <option value="ferreteria">Ferretería</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] text-white py-5 px-8 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl hover:from-[rgb(49,103,192)] hover:to-[rgb(69,123,212)] transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
+                  >
+                    <RocketLaunchIcon className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                    Comenzar
+                    <SparklesIcon className="w-6 h-6 ml-3 group-hover:scale-110 transition-transform duration-300" />
+                  </button>
+                  
+                  {/* Security note */}
+                  <div className="text-center mt-4">
+                    <p className="text-sm text-gray-500 flex items-center justify-center">
+                      <ShieldCheckIcon className="w-4 h-4 mr-1 text-green-500" />
+                      Tus datos están seguros y protegidos
+                    </p>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
+
+          {/* Bottom guarantee */}
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-full text-green-700 font-medium text-sm border border-green-200 shadow-md">
+              <CheckCircleIcon className="w-5 h-5 mr-2 text-green-600" />
+              Garantía: Si no estás satisfecho, cancela cuando quieras sin costo
+            </div>
+          </div>
         </div>
       </section>
     </div>

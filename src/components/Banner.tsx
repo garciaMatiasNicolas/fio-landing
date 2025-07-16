@@ -1,26 +1,34 @@
-import Image from 'next/image';
 import React from 'react';
-import banner from '../../public/img/banner.png';
 import { CalendarDaysIcon } from '@heroicons/react/24/solid';
 
 const Banner = () => {
     return (
-        <div className='w-full h-full bg-[#3B71CA] flex items-center justify-center'>    
-            <div className='w-full max-w-[1000px] flex justify-center flex-col items-center h-[250px] mb-12 pt-5'>
-                <CalendarDaysIcon 
-                    width={80}
-                    height={80}
-                    color='white'
-                />
-                <h2 className='text-center max-w-2xl mt-3 text-2xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-2xl text-white'>
-                    Pruébalo GRATIS por 1 MES y súbete a la era digital
+        <div className='w-full min-h-[400px] md:h-[480px] bg-gradient-to-br from-[rgb(59,113,202)] via-[rgb(79,133,222)] to-[rgb(59,113,202)] flex items-center justify-center relative overflow-hidden'>
+            {/* Decorative background elements */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[rgb(59,113,202)]/20 to-[rgb(99,153,242)]/20"></div>
+            <div className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 bg-white/5 rounded-full -translate-x-20 -translate-y-20 md:-translate-x-36 md:-translate-y-36"></div>
+            <div className="absolute bottom-0 right-0 w-60 h-60 md:w-96 md:h-96 bg-white/5 rounded-full translate-x-24 translate-y-24 md:translate-x-48 md:translate-y-48"></div>
+
+            <div className='relative w-full max-w-[1000px] flex justify-center flex-col items-center h-full px-4 md:px-6 py-10'>
+                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 mb-6">
+                    <CalendarDaysIcon 
+                        width={64}
+                        height={64}
+                        className="text-white sm:w-20 sm:h-20"
+                    />
+                </div>
+                <h2 className='text-center max-w-2xl text-2xl sm:text-3xl font-bold leading-snug tracking-tight text-white mb-3'>
+                    Pruébalo GRATIS por 1 MES
                 </h2>
-                <div className='flex flex-col items-center justify-center gap-2 mt-5'>
-                    <button className='w-[200px] px-6 py-2 text-white bg-sky-400 rounded-md md:ml-5 hover:bg-white hover:text-sky-600 hover:border hover:border-sky-600 transition duration-300'>
+                <p className="text-white text-base sm:text-lg mb-6 sm:mb-8 text-center px-2">
+                    y súbete a la era digital de la gestión inteligente
+                </p>
+                <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full px-4 sm:px-0'>
+                    <button className='w-full sm:w-[200px] px-6 py-3 text-[rgb(59,113,202)] bg-white rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'>
                         Probarlo Gratis
                     </button>
 
-                    <button className='w-[200px] px-6 py-2 text-white bg-transparent rounded-md border border-white md:ml-5 transition duration-300'>
+                    <button className='w-full sm:w-[200px] px-6 py-3 text-white bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300'>
                         Planes y precios
                     </button>
                 </div>

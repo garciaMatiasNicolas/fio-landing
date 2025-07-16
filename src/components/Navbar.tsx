@@ -19,10 +19,10 @@ export const Navbar = ({ isWhite }: { isWhite: boolean }) => {
   }, []);
 
   const navigation = [
-    { name: "Producto", href: "#product" },
-    { name: "Clientes", href: "#clients" },
-    { name: "Testimonios", href: "#testimonials" },
-    { name: "FAQs", href: "#FAQS" },
+    { name: "Producto", href: "/#product" },
+    { name: "Clientes", href: "/#clients" },
+    { name: "Planes", href: "/#plans" },
+    { name: "FAQs", href: "/#FAQS" },
   ];
 
   return (
@@ -77,7 +77,7 @@ export const Navbar = ({ isWhite }: { isWhite: boolean }) => {
             <>
               <Disclosure.Button
                 aria-label="Toggle Menu"
-                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-[#3B71CA] focus:text-[#3B71CA] focus:bg-sky-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-[#3B71CA] focus:text-[#3B71CA] focus:bg-sky-100 focus:outline-none "
               >
                 <svg
                   className="w-6 h-6 fill-current"
@@ -105,7 +105,7 @@ export const Navbar = ({ isWhite }: { isWhite: boolean }) => {
                     <Link
                       key={index}
                       href={item.href}
-                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-[#3B71CA] focus:text-[#3B71CA] focus:bg-sky-100 dark:focus:bg-gray-800 focus:outline-none"
+                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md hover:text-[#3B71CA] focus:text-[#3B71CA] focus:bg-sky-100 focus:outline-none"
                     >
                       {item.name}
                     </Link>

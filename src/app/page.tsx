@@ -11,6 +11,9 @@ import "aos/dist/aos.css"; // Importa los estilos de AOS
 import { benefitOne, benefitTwo } from "@/components/data";
 import Clients from "@/components/Clients";
 import Banner from "@/components/Banner";
+import Stats from "@/components/Stats";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import Plans from "@/components/Plans";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -24,9 +27,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-white">
       <div data-aos="fade-zoom-in">
         <Hero />
+      </div>
+
+      {/* Nueva sección de Estadísticas */}
+      <div data-aos="fade-up">
+        <Stats />
       </div>
 
       <div data-aos="fade-zoom-in" id="product">
@@ -39,9 +47,11 @@ export default function Home() {
         <Benefits data={benefitOne} />
       </div>
 
-      <div data-aos="fade-zoom-in">  
-        <Banner />
+      {/* Nueva sección de Características */}
+      <div data-aos="fade-up">
+        <FeaturesGrid />
       </div>
+
 
       <div data-aos="fade-zoom-in">
         <SectionTitle
@@ -49,6 +59,10 @@ export default function Home() {
           title="Evita el sobrestock"
         />
         <Benefits data={benefitTwo} />
+      </div>
+
+      <div data-aos="fade-zoom-in">  
+        <Banner />
       </div>
       
       <div data-aos="fade-zoom-in">
@@ -60,29 +74,9 @@ export default function Home() {
         <Clients />
       </div>
 
-      {/* <div data-aos="fade-zoom-in">
-        <SectionTitle
-          preTitle="Watch a video"
-          title="Learn how to fullfil your needs"
-        >
-          This section is to highlight a promo or demo video of your product.
-          Analysts says a landing page with video has 3% more conversion rate. So,
-          don&apos;t forget to add one. Just like this.
-        </SectionTitle>
-
-        <Video videoId="fZ0D0cnR88E" />
-      </div> */}
-
-      <div data-aos="fade-zoom-in">
-        <SectionTitle
-          id="testimonials"
-          preTitle="Testimonios"
-          title="Opiniones de nuestros clientes"
-        >
-          Aquí podras comprobar lo que opinan nuestros clientes y ver como estamos del lado tuyo para que puedas aprovrechar nuestro sistema al máximo
-        </SectionTitle>
-
-        <Testimonials />
+      {/* Nueva sección de Planes */}
+      <div data-aos="fade-zoom-in" id="plans">
+        <Plans />
       </div>
 
       <div id="get-demo" className="mb-6"> 
