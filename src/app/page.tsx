@@ -4,15 +4,12 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Importa los estilos de AOS
 import { benefitOne, benefitTwo } from "@/components/data";
 import Clients from "@/components/Clients";
 import Banner from "@/components/Banner";
 import Stats from "@/components/Stats";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import Plans from "@/components/Plans";
-import { useEffect } from "react";
 
 export default function Home() {
 
