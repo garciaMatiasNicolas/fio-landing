@@ -2,8 +2,6 @@
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
-import { Video } from "@/components/Video";
-import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 import AOS from "aos";
@@ -18,26 +16,18 @@ import { useEffect } from "react";
 
 export default function Home() {
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Duración de las animaciones en ms
-      easing: "ease-out", // Suavidad de las animaciones
-      once: true, // Si es true, la animación se ejecutará solo una vez
-    });
-  }, []);
-
   return (
     <div className="bg-white">
-      <div data-aos="fade-zoom-in">
+      <div >
         <Hero />
       </div>
 
       {/* Nueva sección de Estadísticas */}
-      <div data-aos="fade-up">
+      <div>
         <Stats />
       </div>
 
-      <div data-aos="fade-zoom-in" id="product">
+      <div  id="product">
         <SectionTitle
           preTitle="Beneficios DTA F&IO"
           title=" Por que utilizar DTA F&IO"
@@ -48,12 +38,12 @@ export default function Home() {
       </div>
 
       {/* Nueva sección de Características */}
-      <div data-aos="fade-up">
+      <div >
         <FeaturesGrid />
       </div>
 
 
-      <div data-aos="fade-zoom-in">
+      <div >
         <SectionTitle
           preTitle="INVENTARIO"
           title="Evita el sobrestock"
@@ -61,11 +51,11 @@ export default function Home() {
         <Benefits data={benefitTwo} />
       </div>
 
-      <div data-aos="fade-zoom-in">  
+      <div >  
         <Banner />
       </div>
       
-      <div data-aos="fade-zoom-in">
+      <div >
         <SectionTitle
           id="clients"
           preTitle="Clientes"
@@ -75,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Nueva sección de Planes */}
-      <div data-aos="fade-zoom-in" id="plans">
+      <div  id="plans">
         <Plans />
       </div>
 
@@ -83,7 +73,7 @@ export default function Home() {
         <Cta />
       </div>
 
-      <div data-aos="fade-zoom-in">
+      <div >
         <SectionTitle id="FAQS" preTitle="FAQs" title="Preguntas frecuentes" />
         <Faq />
       </div>
