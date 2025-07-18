@@ -5,8 +5,6 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["Producto", "Planes", "Testimonios"];
-  const legal = ["Documentación", "Funcionalidades", "FAQs"];
   return (
     <div className="relative bg-gradient-to-b from-[#3B71CA] to-sky-800 text-white px-6">
       <Container>
@@ -31,47 +29,10 @@ export function Footer() {
               Descubre DTA F&IO: la solución integral de forecasting y optimización de inventarios que mejora la precisión de tus pronósticos, reduce costos y maximiza la eficiencia operativa.
             </div>
           </div>
-
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
-                <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-white rounded-md text-white hover:text-white rounded-md no-underline relative group transition duration-300"
-                >
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-[120px] group-hover:left-0"></span>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
-                <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-white rounded-md text-white hover:text-white rounded-md no-underline relative group transition duration-300"
-                >
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-[120px] group-hover:left-0"></span>
-                </Link>
-              ))}
-            </div>
-          </div>
           <div className="">
             <div>Siguenos</div>
             <div className="flex mt-5 space-x-5 text-white">
-              <a
-                href="https://instagram.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              <a href="https://www.linkedin.com/company/tfa-logistica/posts/?feedView=all" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>
