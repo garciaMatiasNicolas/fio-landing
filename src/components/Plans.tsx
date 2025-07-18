@@ -145,20 +145,6 @@ const Plans = () => {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
-                    <div className="text-center">
-                        <button className={`w-full py-3 sm:py-4 px-4 sm:px-6 bg-gradient-to-r ${plan.color} text-white font-bold text-sm sm:text-base rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105 group-hover:shadow-2xl`}>
-                            <span className="flex items-center justify-center">
-                                <ArrowTrendingUpIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                                Solicitar Demo
-                                <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                            </span>
-                        </button>
-                        
-                        <p className="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-3">
-                            Prueba gratuita por 30 días
-                        </p>
-                    </div>
                 </div>
 
                 {/* Hover effect border */}

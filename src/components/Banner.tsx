@@ -24,13 +24,11 @@ const Banner = () => {
                     y súbete a la era digital de la gestión inteligente
                 </p>
                 <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full px-4 sm:px-0'>
-                    <button className='w-full sm:w-[200px] px-6 py-3 text-[rgb(59,113,202)] bg-white rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'>
-                        Probarlo Gratis
-                    </button>
-
-                    <button className='w-full sm:w-[200px] px-6 py-3 text-white bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300'>
-                        Planes y precios
-                    </button>
+                    <a href='/#plans'>
+                        <button className='w-full sm:w-[200px] px-6 py-3 text-white bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300'>
+                            Planes y precios
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

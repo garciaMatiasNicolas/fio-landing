@@ -7,13 +7,40 @@ import ClientLayout from "@/components/ClientLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DTA F&IO",
+  title: "DTA F&IO | Forecasting y Optimización de Inventario",
   description:
-    "Descubre DTA F&IO: la solución integral de forecasting y optimización de inventarios que mejora la precisión de tus pronósticos, reduce costos y maximiza la eficiencia operativa. Impulsa la toma de decisiones estratégicas con tecnología avanzada y análisis predictivo.",
+    "Mejora tus operaciones con DTA F&IO: forecasting preciso, IA, reposición inteligente y análisis predictivo. Aumenta la eficiencia operativa y reduce costos.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/ICON.ico",
+  },
+  openGraph: {
+    title: "DTA F&IO - Forecasting con IA y Optimización de Inventario",
+    description:
+      "Plataforma avanzada de predicción de demanda y gestión de inventario impulsada por IA.",
+    url: "https://fio.dtalogistica.com",
+    siteName: "DTA F&IO",
+    images: [
+      {
+        url: "https://fio.dtalogistica.com/og-image.jpg", // asegurate de tener una imagen optimizada
+        width: 1200,
+        height: 630,
+        alt: "Forecasting y Optimización de Inventario",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DTA F&IO - Forecasting y Optimización de Inventario",
+    description:
+      "Forecasting de demanda, IA y reposición inteligente para empresas líderes.",
+    images: ["https://fio.dtalogistica.com/og-image.jpg"],
+    site: "@tuusuario",
+    creator: "@tuusuario",
   },
 };
+
 
 export default function RootLayout({
   children,

@@ -95,9 +95,11 @@ const Stats = () => {
                     <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
                         ¿Quieres ver estos resultados en tu empresa?
                     </p>
-                    <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] text-white font-semibold text-sm sm:text-base rounded-xl hover:from-[rgb(49,103,192)] hover:to-[rgb(69,123,212)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Solicitar Demo Gratuita
-                    </button>
+                    <a href="/contact-us">
+                        <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] text-white font-semibold text-sm sm:text-base rounded-xl hover:from-[rgb(49,103,192)] hover:to-[rgb(69,123,212)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            Solicitar Demo
+                        </button>
+                    </a>
                 </div>
             </Container>
         </div>

@@ -127,12 +127,16 @@ const FeaturesGrid = () => {
               Descubre cómo estas características pueden transformar tu gestión de inventarios y proyecciones de ventas
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] text-white font-semibold text-sm sm:text-base rounded-xl hover:from-[rgb(49,103,192)] hover:to-[rgb(69,123,212)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Solicitar Demo
-              </button>
-              <button className="px-6 sm:px-8 py-3 border-2 border-[rgb(59,113,202)]/20 text-[rgb(59,113,202)] font-semibold text-sm sm:text-base rounded-xl hover:bg-[rgb(59,113,202)]/5 hover:border-[rgb(59,113,202)]/30 transition-all duration-300">
-                Ver Planes
-              </button>
+              <a href="/contact-us">
+                <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[rgb(59,113,202)] to-[rgb(79,133,222)] text-white font-semibold text-sm sm:text-base rounded-xl hover:from-[rgb(49,103,192)] hover:to-[rgb(69,123,212)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  Solicitar Demo
+                </button>
+              </a>
+              <a href="/#plans">
+                <button className="px-6 sm:px-8 py-3 border-2 border-[rgb(59,113,202)]/20 text-[rgb(59,113,202)] font-semibold text-sm sm:text-base rounded-xl hover:bg-[rgb(59,113,202)]/5 hover:border-[rgb(59,113,202)]/30 transition-all duration-300">
+                  Ver Planes
+                </button>
+              </a>
             </div>
           </div>
         </div>

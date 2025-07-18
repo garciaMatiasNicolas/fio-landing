@@ -22,33 +22,42 @@ export function PopupWidget() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
 
-  const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
-
   const onSubmit = async (data: any, e: any) => {
     console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
+    
+    // Mapear los datos al formato que espera tu API
+    const formData = {
+      full_name: data.name,
+      email: data.email,
+      phone: data.phone || '', // opcional
+      client: data.company || '', // opcional 
+      industry: '', // opcional
+      message: data.message
+    };
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+    
+    await fetch(`${apiUrl}/api/web/form/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify(data, null, 2),
+      body: JSON.stringify(formData),
     })
       .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
+        if (response.ok) {
           setIsSuccess(true);
-          setMessage(json.message);
+          setMessage("¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.");
           e.target.reset();
           reset();
         } else {
           setIsSuccess(false);
-          setMessage(json.message);
+          setMessage("Ha ocurrido un error. Por favor, intenta nuevamente.");
         }
       })
       .catch((error) => {
         setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
+        setMessage("Error de conexión. Por favor, intenta nuevamente.");
         console.log(error);
       });
   };
@@ -127,21 +136,7 @@ export function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
+                      {/* Campos ocultos no necesarios eliminados */}
                       <input
                         type="checkbox"
                         className="hidden"
@@ -159,7 +154,7 @@ export function PopupWidget() {
                         <input
                           type="text"
                           id="full_name"
-                          placeholder="John Doe"
+                          placeholder="Juan Carlos Pérez"
                           {...register("name", {
                             required: "Tu nombre es requerido",
                             maxLength: 80,
@@ -207,6 +202,42 @@ export function PopupWidget() {
                             {errors.email.message as string}
                           </div>
                         )}
+                      </div>
+
+                      <div className="mb-4">
+                        <label
+                          htmlFor="phone"
+                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                        >
+                          Teléfono (opcional)
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          placeholder="+54 9 351 123 4567"
+                          {...register("phone", {
+                            maxLength: 20,
+                          })}
+                          className="w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-[#3B71CA] ring-indigo-100"
+                        />
+                      </div>
+
+                      <div className="mb-4">
+                        <label
+                          htmlFor="company"
+                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                        >
+                          Empresa (opcional)
+                        </label>
+                        <input
+                          type="text"
+                          id="company"
+                          placeholder="Mi Empresa S.A."
+                          {...register("company", {
+                            maxLength: 100,
+                          })}
+                          className="w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-[#3B71CA] ring-indigo-100"
+                        />
                       </div>
 
                       <div className="mb-4">
@@ -293,9 +324,9 @@ export function PopupWidget() {
                         />
                       </svg>
                       <h3 className="py-5 text-xl text-green-500">
-                        Mensaje enviado correctamente
+                        ¡Mensaje enviado correctamente!
                       </h3>
-                      <p className="text-gray-700 md:px-3">Intentaremos contestar su consulta en la brevedad</p>
+                      <p className="text-gray-700 md:px-3">Nos pondremos en contacto contigo pronto.</p>
                       <button
                         className="mt-6 text-[#3B71CA] focus:outline-none"
                         onClick={() => reset()}
@@ -323,9 +354,9 @@ export function PopupWidget() {
                       </svg>
 
                       <h3 className="text-xl text-red-400 py-7">
-                        Ocurrio un error al enviar el mensaje, intente nuevamente
+                        Ha ocurrido un error al enviar el mensaje
                       </h3>
-                      <p className="text-gray-700 md:px-3">{Message}</p>
+                      <p className="text-gray-700 md:px-3">Por favor, intenta nuevamente.</p>
                       <button
                         className="mt-6 text-[#3B71CA] focus:outline-none"
                         onClick={() => reset()}
